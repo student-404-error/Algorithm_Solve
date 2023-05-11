@@ -2,6 +2,7 @@
 // Created by 김성현 on 2023/05/06.
 //
 #include "stdio.h"
+
 int main(){
     int board[9][9];
     int max = 0;

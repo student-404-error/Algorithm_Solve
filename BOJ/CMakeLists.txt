@@ -3,4 +3,4 @@ project(BOJ C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(BOJ Clang/2566.c)
+add_executable(BOJ Clang/2566.c Clang/1107.c Clang/11723.c)
