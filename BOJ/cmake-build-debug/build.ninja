@@ -67,6 +67,12 @@ build CMakeFiles/BOJ.dir/Clang/11723.c.o: C_COMPILER__BOJ_Debug /Users/ksh/Docum
   OBJECT_DIR = CMakeFiles/BOJ.dir
   OBJECT_FILE_DIR = CMakeFiles/BOJ.dir/Clang
 
+build CMakeFiles/BOJ.dir/Clang/12813.c.o: C_COMPILER__BOJ_Debug /Users/ksh/Documents/GitHub/Algorithm_Solve/BOJ/Clang/12813.c || cmake_object_order_depends_target_BOJ
+  DEP_FILE = CMakeFiles/BOJ.dir/Clang/12813.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu11
+  OBJECT_DIR = CMakeFiles/BOJ.dir
+  OBJECT_FILE_DIR = CMakeFiles/BOJ.dir/Clang
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target BOJ
@@ -75,7 +81,7 @@ build CMakeFiles/BOJ.dir/Clang/11723.c.o: C_COMPILER__BOJ_Debug /Users/ksh/Docum
 #############################################
 # Link the executable BOJ
 
-build BOJ: C_EXECUTABLE_LINKER__BOJ_Debug CMakeFiles/BOJ.dir/Clang/2566.c.o CMakeFiles/BOJ.dir/Clang/1107.c.o CMakeFiles/BOJ.dir/Clang/11723.c.o
+build BOJ: C_EXECUTABLE_LINKER__BOJ_Debug CMakeFiles/BOJ.dir/Clang/2566.c.o CMakeFiles/BOJ.dir/Clang/1107.c.o CMakeFiles/BOJ.dir/Clang/11723.c.o CMakeFiles/BOJ.dir/Clang/12813.c.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
   OBJECT_DIR = CMakeFiles/BOJ.dir
   POST_BUILD = :

@@ -12,70 +12,38 @@
 */
 
 #include "stdio.h"
-#include "stdbool.h"
 #include "string.h"
 
-void add(bool* ptr, int x){
-    ptr[x] = true;
-}
-void rm(bool* ptr, int x){
-    ptr[x] = false;
-}
-void check(bool* ptr, int x){
-    if(ptr[x] == 1){
-        printf("1\n");
-    } else {
-        printf("0\n");
-    }
-}
-void toggle(bool* ptr, int x){
-    if(ptr[x]){
-        ptr[x] = false;
-    } else {
-        ptr[x] = true;
-    }
-}
-void all(bool* ptr){
-    for(int i=0;i<20;i++) {
-        ptr[i] = true;
-    }
-}
-void empty(bool* ptr){
-    for(int i=0;i<20;i++) {
-        ptr[i] = false;
-    }
-}
 int main(){
-    // 0 -> false
-    // 1 -> true
-    bool set[20] = {false,};
+    int set = 0;
     int commandCnt;
-    bool* ptr = &set[0];
     scanf("%d", &commandCnt);
+    char cmd[8];
     for(int i=0; i<commandCnt;i++){
-        char cmd[8];
         int x;
         scanf("%s", cmd);
+        if(strcmp(cmd, "all") == 0){
+            set |= (1<<20)-1;
+            continue;
+        } else if(strcmp(cmd, "empty") == 0) {
+            set = 0;
+            continue;
+        }
+        scanf("%d", &x);
+        int k = 1<<(x-1);
         if(strcmp(cmd, "add") == 0){
-            scanf("%d", &x);
-            add(ptr, x-1);
+            set |= k;
         } else if(strcmp(cmd, "remove") == 0){
-            scanf("%d", &x);
-            rm(ptr, x-1);
+            set &= ~(1<<(x-1));
         } else if(strcmp(cmd, "check") == 0){
-            scanf("%d", &x);
-            check(ptr, x-1);
+            if((set & k) > 0){
+                printf("1\n");
+            } else {
+                printf("0\n");
+            }
         } else if(strcmp(cmd, "toggle") == 0){
-            scanf("%d", &x);
-            toggle(ptr, x-1);
-        } else if(strcmp(cmd, "all") == 0){
-            all(ptr);
-        } else if(strcmp(cmd, "empty") == 0){
-            empty(ptr);
+            set ^= k;
         }
     }
-//    for(int i=0; i<20;i++) {
-//        printf("%d ", set[i]);
-//    }
     return 0;
 }
