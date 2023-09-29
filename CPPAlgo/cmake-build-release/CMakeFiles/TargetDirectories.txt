@@ -1,3 +1,0 @@
-/Users/ksh/Documents/GitHub/Algorithm_Solve/CPPAlgo/cmake-build-release/CMakeFiles/CPPAlgo.dir
-/Users/ksh/Documents/GitHub/Algorithm_Solve/CPPAlgo/cmake-build-release/CMakeFiles/edit_cache.dir
-/Users/ksh/Documents/GitHub/Algorithm_Solve/CPPAlgo/cmake-build-release/CMakeFiles/rebuild_cache.dir
